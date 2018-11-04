@@ -24,12 +24,21 @@ copyright: true
 [实现数字增长动画-countUp.js](https://github.com/inorganik/CountUp.js)
 [Web水印](https://github.com/loadchange/gwm)
 [搭建标准的js库jslib-base](https://github.com/yanhaijing/jslib-base)
+[draggable](https://github.com/Shopify/draggable)
+[表格](https://github.com/SheetJS/js-xlsx)
+[发布订阅模式-EventEmitter](https://github.com/Olical/EventEmitter)
+[不蒜子](http://busuanzi.ibruce.info/)
 #	微信小程序开发框架
 [vue风格mpvue](https://github.com/Meituan-Dianping/mpvue)
 [vue风格wepy](https://github.com/Tencent/wepy)
 [react风格taro](https://github.com/NervJS/taro)
 #	React相关
-[react-hover](https://www.npmjs.com/package/react-hover)	
+[react-hover](https://www.npmjs.com/package/react-hover)
+[autobind-decorator](https://www.npmjs.com/package/autobind-decorator)	
+[react-helmet](https://www.npmjs.com/package/react-helmet)
+[react-loadable](https://www.npmjs.com/package/react-loadable)
+[react-content-loader](https://www.npmjs.com/package/react-content-loader)
+[react-lazyload](https://www.npmjs.com/package/react-lazyload)
 
 #	图标
 [Font-Awesome](https://github.com/FortAwesome/Font-Awesome)
@@ -42,13 +51,14 @@ copyright: true
 [Animate.css](https://github.com/daneden/animate.css)
 [演示文稿-reveal.js](https://github.com/hakimel/reveal.js)
 [演示文稿-impress.js](https://github.com/impress/impress.js)
+[animate-text](https://github.com/qgh810/animate-text)
 [pdf.js](https://github.com/mozilla/pdf.js)
 [轮播器-swiper](https://github.com/nolimits4web/swiper)
-#	移动端图表库
+#	图表库
 [ECharts](https://github.com/apache/incubator-echarts)
 [BizCharts](https://github.com/alibaba/BizCharts/)
 [AntV](http://antv.alipay.com/zh-cn/index.html)
-
+[Chart](https://github.com/chartjs/Chart.js)
 #	游戏
 [phaser](https://github.com/photonstorm/phaser)
 

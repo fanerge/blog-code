@@ -1,6 +1,6 @@
 ---
 title: git常用语法汇总
-date: 2018-10-07 14:42:02
+date: 2018-10-31 21:42:02
 tags: 'git'
 categories: '代码管理'
 copyright: true
@@ -18,6 +18,7 @@ git fetch // 取回远程主机所有分支的更新
 git fetch [remoteUrl] // 取回远程主机[remoteUrl]的更新到本地仓库（不自动合并到工作区）
 git fetch [upstream] // 取回远程主机的引用[upstream]的更新到本地仓库
 git fetch [remoteUrl] [branchName] // 取回远程主机[remoteUrl]的分支[branchName]的更新
+git fetch [remoteUrl|upstream] [远程分支名]:[本地分支名] // 将[远程分支]fetch到本地并命名为[本地分支名]
 
 #	git checkout
 用于切换分支或恢复工作区文件
@@ -25,7 +26,8 @@ git checkout [branchName] // 切换到[branchName]分支
 git checkout -b [branchName] // 创建并切换到[branchName]分支
 git checkout -b [localBranch] [remoteUrl]/[remoteBranch] // 创建并切换到[localBranch]并追踪[remoteUrl]/[remoteBranch]
 git checkout -m [branchName] // 如果你在错误分支中开发，但又不允许直接切换分支（因为本地有修改），git会帮我们将错误分支到代码合并到branchNane
-git checkout \-\- [fileName] // 撤销工作区的操作（没有通过git add添加到暂存区）
+git checkout \-\- [fileName] // 撤销工作区的指定文件的操作（没有通过git add添加到暂存区）
+git checkout . // 撤销工作区的所有文件的操作
 git checkout head \-\- [fileName] // 撤销文件到上次commit的时候（head指向上次commit）
 git checkout -b [localBranchName] [upstream]/[remoteBranchName] // 新建并切换[localBranchName]且该分支追踪到[upstream]/[remoteBranchName]
 
@@ -149,7 +151,8 @@ git mv [oldFileName] [newFileName] // 重命名
 
 #	git reset
 对受git管理的文件重置处理
-git reset HEAD [fileName] // 撤销已经git add到暂存区的操作（原理是重新取最后一次commit的内容）
+git reset HEAD [fileName] // 撤销已经git add到暂存区的指定文件的操作（原理是重新取最后一次commit的内容）
+git reset HEAD // 撤销已经git add到暂存区的操作
 git reset HEAD~1 // 重置到上次commit
 git reset [commitId] // 重置到commitId
 git reset \-\-soft [commitId] // HEAD回退到commitId，暂存区和工作区不变
@@ -241,7 +244,6 @@ pwd // 查看当前目录地址
 cd [directory] // 进入当前目录
 clear // 清空终端
 rm [fileName] // 删除文件
-cat // 查看文件内容
 mv [fileName] [dirName] // 移动文件
 mkdir [dirName] // 创建目录
 ifconfig // 查看ip地址等信息
@@ -251,7 +253,8 @@ vim [fileName] // 使用vim编辑器编辑文件
 touch test.txt
 echo 'hello world' > test.txt
 
-
+>	参考文档：
+[Git撤销&回滚操作](https://blog.csdn.net/ligang2585116/article/details/71094887)
 
 
 
