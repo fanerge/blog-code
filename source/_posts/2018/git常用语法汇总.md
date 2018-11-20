@@ -244,6 +244,8 @@ pwd // 查看当前目录地址
 cd [directory] // 进入当前目录
 clear // 清空终端
 rm [fileName] // 删除文件
+ren *.js *.ts // 将.js后缀改为.ts后缀
+del *.js // 删除js后缀的文件
 mv [fileName] [dirName] // 移动文件
 mkdir [dirName] // 创建目录
 ifconfig // 查看ip地址等信息

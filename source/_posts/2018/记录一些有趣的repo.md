@@ -8,6 +8,7 @@ copyright: true
 [大量开源项目hellogithub](https://hellogithub.com/)
 
 #	轮子
+[awesome-javascript](https://github.com/sorrycc/awesome-javascript#package-managers)
 [前端常用插件、工具类库汇总](https://juejin.im/post/5ba7d5dd5188255c6140cc9d)
 [Web开发前端模版](https://github.com/h5bp/html5-boilerplate)
 [美化代码-prettier](https://github.com/prettier/prettier)
@@ -39,6 +40,9 @@ copyright: true
 [react-loadable](https://www.npmjs.com/package/react-loadable)
 [react-content-loader](https://www.npmjs.com/package/react-content-loader)
 [react-lazyload](https://www.npmjs.com/package/react-lazyload)
+[react-slick](https://react-slick.neostack.com/docs/get-started)
+[awesome-react](https://github.com/enaqx/awesome-react)
+[react-component-list](https://dvemac.github.io/react-component-list/)
 
 #	图标
 [Font-Awesome](https://github.com/FortAwesome/Font-Awesome)
