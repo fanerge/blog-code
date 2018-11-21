@@ -144,7 +144,8 @@ git diff \-\-cached // \-\-staged 查看已暂存的修改
 #	git rm && git mv
 用于从工作区和索引中删除文件（git rm 删除文件可以被git记录下来，rm只是物理删除）
 git rm \-\-cached [fileName] // 只是从暂存区中删除文件索引
-git rm -f [fileName] // 工作区和暂存区同时删除文件
+git rm [fileName] // 工作区和暂存区同时删除文件
+PS：其他参数-f为\-\-force -r为递归处理该目录下的所有文件
 用于移动或重命名文件
 git mv [fileName] [dirName] // 将文件[fileName]移动到目录[dirName]中去
 git mv [oldFileName] [newFileName] // 重命名
