@@ -28,6 +28,7 @@ copyright: true
 [draggable](https://github.com/Shopify/draggable)
 [表格](https://github.com/SheetJS/js-xlsx)
 [发布订阅模式-EventEmitter](https://github.com/Olical/EventEmitter)
+[同构fetch](https://github.com/matthew-andrews/isomorphic-fetch)
 [不蒜子](http://busuanzi.ibruce.info/)
 #	微信小程序开发框架
 [vue风格mpvue](https://github.com/Meituan-Dianping/mpvue)
