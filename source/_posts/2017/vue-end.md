@@ -2,6 +2,7 @@
 title: vue  end
 category: "vue"
 tags: [vue,element-ui]
+date: 2017-08-26 09:01:02
 ---
 ## 今天完成后台界面中引入[iconfont](http://www.iconfont.cn)图标和添加全屏功能[screenfull]()
 *如有不正确的地方，请大家提出来，我会更正，共同进步，谢谢。*

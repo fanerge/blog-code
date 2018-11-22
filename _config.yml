@@ -94,7 +94,6 @@ deploy:
   type: git
   repository: 
     github: git@github.com:fanerge/fanerge.github.io.git,master
-    coding: git@git.coding.net:fanerge/blog.git,master
 #    coding: git://git.coding.net/fanerge/blog.git,master
 
 
