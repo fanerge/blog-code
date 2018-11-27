@@ -44,6 +44,7 @@ copyright: true
 [react-slick](https://react-slick.neostack.com/docs/get-started)
 [awesome-react](https://github.com/enaqx/awesome-react)
 [react-component-list](https://dvemac.github.io/react-component-list/)
+[React-Clipboard](https://www.npmjs.com/package/react-clipboard.js)
 
 #	图标
 [Font-Awesome](https://github.com/FortAwesome/Font-Awesome)
