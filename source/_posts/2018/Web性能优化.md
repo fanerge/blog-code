@@ -5,6 +5,15 @@ tags: '性能'
 categories: '性能'
 copyright: true
 ---
+#	页面渲染的4个关键指示
+##	First Paint（FP）
+仅有一个需要挂载的根节点。
+##	First Contentful Paint（FCP）
+包含页面的基本框架，但没有数据内容。
+##	First Meaningful（FMP）
+包含页面所有元素及数据。
+##	Time to Interactive（TTI）
+允许交互时间。
 #  预加载技术
 ##  DNS prefetch
 DNS prefetching通过指定具体的URL来告知客户端未来会用到相关的资源，这样浏览器可以尽早的解析DNS。
