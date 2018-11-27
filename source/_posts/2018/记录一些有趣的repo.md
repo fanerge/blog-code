@@ -44,6 +44,8 @@ copyright: true
 [react-slick](https://react-slick.neostack.com/docs/get-started)
 [awesome-react](https://github.com/enaqx/awesome-react)
 [react-component-list](https://dvemac.github.io/react-component-list/)
+[react-dnd-html5-backend](https://www.npmjs.com/package/react-dnd-html5-backend)
+[react-dnd](https://www.npmjs.com/package/react-dnd)
 
 #	图标
 [Font-Awesome](https://github.com/FortAwesome/Font-Awesome)
