@@ -234,6 +234,13 @@ git am [补丁标记id] // 使用补丁修改本地文件并创建提交
 git config \-\-list // 查看所有的git配置
 git config [key] // 查看特定项配置
 
+#	重置分支
+git branch -D [branchName] // 删除本地分支
+git push [远程主机名] -d [远程分支名] // 删除远程分支
+git fetch [远程主机名] master:[本地分支名] // 以远程的master作为本地的[本地分支名]
+git push [远程主机名] [本地分支名] // 将本地分支推送到远端
+git branch \-\-set-upstream-to [远程主机名]/[远程分支名]
+
 #	其他
 git init // 创建一个空的Git仓库或重新初始化一个现有仓库
 git reflog // 查看所有分支的所有操作记录（包括commit和reset的操作）
