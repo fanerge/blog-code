@@ -183,26 +183,150 @@ printf  format-string  [arguments...]
 \0ddd	表示1到3位的八进制值字符
 #	Shell test 命令
 Shell中的 test 命令用于检查某个条件是否成立，它可以进行数值、字符和文件三个方面的测试。
-##	数值测试
+数值测试、字符串测试、文件测试类似
+```
+num1=100
+num2=100
+if test $[num1] -eq $[num2]
+then
+    echo '两个数相等！'
+else
+    echo '两个数不相等！'
+fi
+```
+#	Shell 流程控制
+##	if else
+```
+if condition1
+then
+    command1
+elif condition2 
+then 
+    command2
+else
+    commandN
+fi
+```
+##	for 循环
+```
+for var in item1 item2 ... itemN
+do
+    command1
+    command2
+    ...
+    commandN
+done
+```
+##	while 语句
+```
+while condition
+do
+    command
+done
+```
+PS：let 命令，它用于执行一个或多个表达式，变量计算中不需要加上 $ 来表示变量。
+```
+echo '按下 <CTRL-D> 退出'
+echo -n '输入你最喜欢的网站URL: '
+while read url
+do
+    echo "是的！${url} 是一个好网站"
+done
+```
+PS：while循环可用于读取键盘信息。
+##	无限循环
+```
+while :
+do
+    command
+done
+---------
+while true
+do
+    command
+done
+---------
+for (( ; ; ))
+```
+##	until 循环
+```
+until condition
+do
+    command
+done
+```
+PS：until 循环执行一系列命令直至条件为 true 时停止，这恰好与 while 相反。
+##	case
+```
+case 值 in
+模式1)
+    command1
+    command2
+    ...
+    commandN
+    ;;
+模式2）
+    command1
+    command2
+    ...
+    commandN
+    ;;
+*)
+	command1
+    command2
+    ...
+    commandN
+    ;;
+esac
+```
+PS：case以esac结尾。
+##	跳出循环
+在循环过程中，有时候需要在未达到循环结束条件时强制跳出循环，Shell使用两个命令来实现该功能：break和continue。
+break命令
+break命令允许跳出所有循环（终止执行后面的所有循环）。
+continue
+continue命令与break命令类似，只有一点差别，它不会跳出所有循环，仅仅跳出当前循环。
+#	Shell 函数
+```
+[ function ] funname [()]
 
+{
 
+    action;
 
+    [return int;]
 
+}
+-------
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+```
+PS：return 返回，如果不加，将以最后一条命令运行结果，作为返回值。 return后跟数值n(0-255)。
+$1、$2、${10}分别代表第一个、第二个、第十个参数。
+函数返回值在调用该函数后通过 $? 来获得。
+参数处理	说明
+$#	传递到脚本的参数个数
+$*	以一个单字符串显示所有向脚本传递的参数
+$$	脚本运行的当前进程ID号
+$!	后台运行的最后一个进程的ID号
+$@	与$*相同，但是使用时加引号，并在引号中返回每个参数。
+$-	显示Shell使用的当前选项，与set命令功能相同。
+$?	显示最后命令的退出状态。0表示没有错误，其他任何值表明有错误。
+#	Shell 输入/输出重定向
+命令	说明
+command > file	将输出重定向到 file。
+PS：注意任何file1内的已经存在的内容将被新内容替代。
+command < file	将输入重定向到 file。
+command >> file	将输出以追加的方式重定向到 file。
+PS：追加。
+n > file	将文件描述符为 n 的文件重定向到 file。
+n >> file	将文件描述符为 n 的文件以追加的方式重定向到 file。
+n >& m	将输出文件 m 和 n 合并。
+n <& m	将输入文件 m 和 n 合并。
+<< tag	将开始标记 tag 和结束标记 tag 之间的内容作为输入。
+#	Shell 文件包含
+```
+. filename   # 注意点号(.)和文件名中间有一空格
+```
 
 
 
