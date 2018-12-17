@@ -44,13 +44,10 @@ copyright: true
 [react-slick](https://react-slick.neostack.com/docs/get-started)
 [awesome-react](https://github.com/enaqx/awesome-react)
 [react-component-list](https://dvemac.github.io/react-component-list/)
-<<<<<<< HEAD
 [React-Clipboard](https://www.npmjs.com/package/react-clipboard.js)
-=======
 [react-dnd-html5-backend](https://www.npmjs.com/package/react-dnd-html5-backend)
 [react-dnd](https://www.npmjs.com/package/react-dnd)
->>>>>>> 1ff6435aa5a96388a7be6c25b53c8eab9eea95eb
-
+[react-highlight-words](https://github.com/bvaughn/react-highlight-words)
 #	图标
 [Font-Awesome](https://github.com/FortAwesome/Font-Awesome)
 
