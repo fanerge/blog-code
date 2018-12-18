@@ -151,7 +151,7 @@ git mv [fileName] [dirName] // 将文件[fileName]移动到目录[dirName]中去
 git mv [oldFileName] [newFileName] // 重命名
 
 #	git reset
-对受git管理的文件重置处理
+作用是修改HEAD的位置，即将HEAD指向的位置改变为之前存在的某个版本（这个版本之后的commit都将消失）【2018-12-18更新】
 git reset HEAD [fileName] // 撤销已经git add到暂存区的指定文件的操作（原理是重新取最后一次commit的内容）
 git reset HEAD // 撤销已经git add到暂存区的操作
 git reset HEAD~1 // 重置到上次commit
@@ -160,6 +160,11 @@ git reset \-\-soft [commitId] // HEAD回退到commitId，暂存区和工作区�
 git reset \-\-mixed [commitId] // HEAD回退到commitId，暂存区改变，工作区不变（默认方式）
 git reset \-\-hard [commitId] // HEAD回退到commitId，暂存区和工作区都将改变（非常危险）
 [git reset soft,hard,mixed之区别深解](https://www.cnblogs.com/kidsitcn/p/4513297.html)
+
+#	git revert
+作用通过反做创建一个新的版本，这个版本的内容与我们要回退到的目标版本一样，但是HEAD指针是指向这个新生成的版本，而不是目标版本。
+适用场景： 如果我们想恢复之前的某一版本（该版本不是merge类型），但是又想保留该目标版本后面的版本，记录下这整个版本变动流程，就可以用这种方法。
+[Git恢复之前版本的两种方法reset、revert（图文详解）](https://blog.csdn.net/yxlshk/article/details/79944535)【2018-12-18更新】
 
 #	git remote
 git remote rename [shortOldName] [shortNewName]// 修改一个远程仓库的简写名（引用）
