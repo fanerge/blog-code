@@ -29,7 +29,7 @@ git checkout -m [branchName] // 如果你在错误分支中开发，但又不允
 git checkout \-\- [fileName] // 撤销工作区的指定文件的操作（没有通过git add添加到暂存区）
 git checkout . // 撤销工作区的所有文件的操作
 git checkout head \-\- [fileName] // 撤销文件到上次commit的时候（head指向上次commit）
-git checkout -b [localBranchName] [upstream]/[remoteBranchName] // 新建并切换[localBranchName]且该分支追踪到[upstream]/[remoteBranchName]
+git checkout -b [localBranchName] [upstream]/[remoteBranchName] // 以远程[remoteBranchName]为模板新建[localBranchName]并切换到该分支并追踪到[upstream]/[remoteBranchName]【2018-12-19】
 
 #	git pull
 用于从另一个存储库或本地分支获取并集成（git fetch + git merge FETCH_HEAD）
@@ -245,6 +245,7 @@ git push [远程主机名] -d [远程分支名] // 删除远程分支
 git fetch [远程主机名] master:[本地分支名] // 以远程的master作为本地的[本地分支名]
 git push [远程主机名] [本地分支名] // 将本地分支推送到远端
 git branch \-\-set-upstream-to [远程主机名]/[远程分支名]
+git checkout -b [localBranchName] [upstream]/[remoteBranchName]
 
 #	其他
 git init // 创建一个空的Git仓库或重新初始化一个现有仓库
