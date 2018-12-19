@@ -100,6 +100,7 @@ git rebase [branchName]
 git add
 git rebase \-\-continue
 git rebase \-\-abort // 在过程中可以终止rebase，恢复到rebase开始前的状态。
+[git rebase 与 git merge](http://gitbook.liuhui998.com/4_2.html)
 
 #	git log
 用于显示提交日志信息
