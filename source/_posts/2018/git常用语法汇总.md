@@ -29,7 +29,7 @@ git checkout -m [branchName] // 如果你在错误分支中开发，但又不允
 git checkout \-\- [fileName] // 撤销工作区的指定文件的操作（没有通过git add添加到暂存区）
 git checkout . // 撤销工作区的所有文件的操作
 git checkout head \-\- [fileName] // 撤销文件到上次commit的时候（head指向上次commit）
-git checkout -b [localBranchName] [upstream]/[remoteBranchName] // 新建并切换[localBranchName]且该分支追踪到[upstream]/[remoteBranchName]
+git checkout -b [localBranchName] [upstream]/[remoteBranchName] // 以远程[remoteBranchName]为模板新建[localBranchName]并切换到该分支并追踪到[upstream]/[remoteBranchName]【2018-12-19】
 
 #	git pull
 用于从另一个存储库或本地分支获取并集成（git fetch + git merge FETCH_HEAD）
@@ -100,8 +100,8 @@ Git rebase master
 // 如果有冲突，解决冲突—循环
 git add .
 git rebase \-\-continue
-// 终止rebase，回到rebase之前
-git rebase \-\-abort
+git rebase \-\-abort // 在过程中可以终止rebase，恢复到rebase开始前的状态。
+[git rebase 与 git merge](http://gitbook.liuhui998.com/4_2.html)
 
 #	git log
 用于显示提交日志信息
@@ -153,7 +153,7 @@ git mv [fileName] [dirName] // 将文件[fileName]移动到目录[dirName]中去
 git mv [oldFileName] [newFileName] // 重命名
 
 #	git reset
-对受git管理的文件重置处理
+作用是修改HEAD的位置，即将HEAD指向的位置改变为之前存在的某个版本（这个版本之后的commit都将消失）【2018-12-18更新】
 git reset HEAD [fileName] // 撤销已经git add到暂存区的指定文件的操作（原理是重新取最后一次commit的内容）
 git reset HEAD // 撤销已经git add到暂存区的操作
 git reset HEAD~1 // 重置到上次commit
@@ -162,6 +162,11 @@ git reset \-\-soft [commitId] // HEAD回退到commitId，暂存区和工作区�
 git reset \-\-mixed [commitId] // HEAD回退到commitId，暂存区改变，工作区不变（默认方式）
 git reset \-\-hard [commitId] // HEAD回退到commitId，暂存区和工作区都将改变（非常危险）
 [git reset soft,hard,mixed之区别深解](https://www.cnblogs.com/kidsitcn/p/4513297.html)
+
+#	git revert
+作用通过反做创建一个新的版本，这个版本的内容与我们要回退到的目标版本一样，但是HEAD指针是指向这个新生成的版本，而不是目标版本。
+适用场景： 如果我们想恢复之前的某一版本（该版本不是merge类型），但是又想保留该目标版本后面的版本，记录下这整个版本变动流程，就可以用这种方法。
+[Git恢复之前版本的两种方法reset、revert（图文详解）](https://blog.csdn.net/yxlshk/article/details/79944535)【2018-12-18更新】
 
 #	git remote
 git remote rename [shortOldName] [shortNewName]// 修改一个远程仓库的简写名（引用）
@@ -242,6 +247,7 @@ git push [远程主机名] -d [远程分支名] // 删除远程分支
 git fetch [远程主机名] master:[本地分支名] // 以远程的master作为本地的[本地分支名]
 git push [远程主机名] [本地分支名] // 将本地分支推送到远端
 git branch \-\-set-upstream-to [远程主机名]/[远程分支名]
+git checkout -b [localBranchName] [upstream]/[remoteBranchName]
 
 #	其他
 git init // 创建一个空的Git仓库或重新初始化一个现有仓库
