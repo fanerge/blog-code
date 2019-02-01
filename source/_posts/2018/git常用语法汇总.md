@@ -249,6 +249,15 @@ git push [远程主机名] [本地分支名] // 将本地分支推送到远端
 git branch \-\-set-upstream-to [远程主机名]/[远程分支名]
 git checkout -b [localBranchName] [upstream]/[remoteBranchName]
 
+#	查端口所用PID，并kill【2019-02-01更新】
+##	mac
+lsof -i:port号 // 查端口所用PID
+kill PID // 杀掉进程
+##	window
+netstat -aon | findstr port号 // 查端口所用PID
+tasklist | findstr PID // 根据PID查进程
+taskkill /pid  PID -t -f // 杀掉进程
+
 #	其他
 git init // 创建一个空的Git仓库或重新初始化一个现有仓库
 git reflog // 查看所有分支的所有操作记录（包括commit和reset的操作）
