@@ -30,6 +30,7 @@ copyright: true
 [发布订阅模式-EventEmitter](https://github.com/Olical/EventEmitter)
 [同构fetch](https://github.com/matthew-andrews/isomorphic-fetch)
 [不蒜子](http://busuanzi.ibruce.info/)
+[文件上传uppy](https://github.com/transloadit/uppy/)
 #	微信小程序开发框架
 [vue风格mpvue](https://github.com/Meituan-Dianping/mpvue)
 [vue风格wepy](https://github.com/Tencent/wepy)
