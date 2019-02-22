@@ -51,7 +51,10 @@ copyright: true
 [react-highlight-words](https://github.com/bvaughn/react-highlight-words)
 #	图标
 [Font-Awesome](https://github.com/FortAwesome/Font-Awesome)
-
+#	Git（Commit规范）
+[commitizen](https://github.com/commitizen/cz-cli)
+[commitlint](https://marionebl.github.io/commitlint/#/) 
+[husky](https://github.com/typicode/husky)
 #	页面生产图片
 [html2canvas](https://github.com/niklasvh/html2canvas/)   
 [dom-to-image](https://github.com/tsayen/dom-to-image)  
