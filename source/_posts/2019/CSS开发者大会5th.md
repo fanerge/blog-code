@@ -1,3 +1,11 @@
+---
+title: CSS开发者大会5th
+date: 2019-04-17 09:26:17
+tags: 'CSS'
+keywords: 'CSS'
+copyright: true
+---
+
 
 周末看了CSS2019开发者大会的视频，受益匪浅。本文记录大部分视频内容以及自己的理解，如有理解不当的地方，还望指出。
 ### 为什么块格式自动 margin 不垂直居中元素？
@@ -186,5 +194,4 @@ writing-mode
 shape-outside
 shape-outside的CSS 属性定义了一个可以是非矩形的形状，相邻的内联内容应围绕该形状进行排列。
 CSS Regions && CSS Exclusions
-
 
