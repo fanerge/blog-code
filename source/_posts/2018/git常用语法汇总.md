@@ -261,6 +261,7 @@ taskkill /pid  PID -t -f // 杀掉进程
 #	其他
 git init // 创建一个空的Git仓库或重新初始化一个现有仓库
 git reflog // 查看所有分支的所有操作记录（包括commit和reset的操作）
+git cherry-pick [commitHash] // 把某个分支的commit作为一个新的commit引入到你当前分支上 
 git help // 查看帮助列表
 git help [key] // 查看特定[key]相关帮助
 git mergetool // 用于运行合并冲突解决工具来解决合并冲突
