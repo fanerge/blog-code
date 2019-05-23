@@ -27,6 +27,12 @@ yum clean packages: 清除缓存目录下的软件包
 yum clean headers: 清除缓存目录下的 headers
 yum clean oldheaders: 清除缓存目录下旧的 headers
 yum clean, yum clean all (= yum clean packages; yum clean oldheaders) :清除缓存目录下的软件包及旧的headers
+##	lsof
+list open files
+是一个列出当前系统打开文件的工具
+###	处理端口占用
+lsof -i tcp:port // 返回pid
+kill pid // 杀死进程
 
 # 文件
 ##  ls

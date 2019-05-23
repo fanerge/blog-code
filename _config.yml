@@ -96,7 +96,11 @@ deploy:
     github: git@github.com:fanerge/fanerge.github.io.git,master
 #    coding: git://git.coding.net/fanerge/blog.git,master
 
-
+# 站内搜索
+search:
+    path: search.xml
+    field: post
+    content: true
   
   
   
