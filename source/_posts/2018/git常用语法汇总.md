@@ -22,6 +22,7 @@ git fetch [remoteUrl|upstream] [远程分支名]:[本地分支名] // 将[远程
 
 #	git checkout
 用于切换分支或恢复工作区文件
+git checkout - // 切到最近的一次分支
 git checkout [branchName] // 切换到[branchName]分支
 git checkout -b [branchName] // 创建并切换到[branchName]分支
 git checkout -b [localBranch] [remoteUrl]/[remoteBranch] // 创建并切换到[localBranch]并追踪[remoteUrl]/[remoteBranch]
@@ -93,10 +94,12 @@ git merge -s ours [branchName] // 合并branchName分支到当前分支,并使�
 git merge -s theies [branchName] // 同上，但该参数将强迫冲突发生时，自动使用被合并分支的版本
 
 #	git rebase
-作用：该命令会把你的”dev”分支里的每个提交(commit)取消掉，并且把它们临时保存为补丁(patch)(这些补丁放到".git/rebase"目录中),然后把”dev”分支从最新的"origin"分支更新，最后把保存的这些补丁应用到”dev”分支上。
+如在 dev 分支上执行：git rebase master
+作用：该命令会把你的”dev”分支里的每个提交(commit)取消掉，并且把它们临时保存为补丁(patch)(这些补丁放到".git/rebase"目录中),然后把最新的“master”代码合并到“dev”分支，最后把之前临时保存的这些补丁应用到”dev”分支上。
 git describe // 显示离当前提交最近的标签
+##	需求（开发分支 dev 远程分支 remoteDev）
 git checkout dev
-Git rebase master
+Git rebase remoteDev
 // 如果有冲突，解决冲突—循环
 git add .
 git rebase \-\-continue
@@ -170,11 +173,12 @@ git reset \-\-hard [commitId] // HEAD回退到commitId，暂存区和工作区�
 
 #	git remote
 git remote rename [shortOldName] [shortNewName]// 修改一个远程仓库的简写名（引用）
-git remote rm [shortname] // 移除一个远程仓库
+git remote rm [shortname] // 移除一个源
 git remote show [remoteName] // 查看某一个远程仓库的更多信息
 git remote // 查看远程仓库（origin代表你本地clone的远程地址）
 git remote -v // 查看远程仓库（带fetch、push地址）
 git remote add [shortName] [url] // 添加远程仓库（shortname为以后的引用名）
+git remote set-url [shortOldName] [url] // 修改源[shortOldName]的地址
 git remote // 管理一组跟踪的存储库
 git remote // 查询当前库的远程库
 git remote -v // （\-\-verbose）查看库的远程fetch和push地址（前提是有对应权限）
@@ -265,26 +269,23 @@ git cherry-pick [commitHash] // 把某个分支的commit作为一个新的commit
 git help // 查看帮助列表
 git help [key] // 查看特定[key]相关帮助
 git mergetool // 用于运行合并冲突解决工具来解决合并冲突
-ls // 查看当前目录资源
-pwd // 查看当前目录地址
-cd [directory] // 进入当前目录
-clear // 清空终端
-rm [fileName] // 删除文件
-ren *.js *.ts // 将.js后缀改为.ts后缀
-del *.js // 删除js后缀的文件
-mv [fileName] [dirName] // 移动文件
-mkdir [dirName] // 创建目录
+git blame [file] // 用来定位每一行代码的最后一次修改者
 ifconfig // 查看ip地址等信息
 ipconfig // 查看ip地址（window）
-cat [fileName] // 查看[fileName]
-vim [fileName] // 使用vim编辑器编辑文件
-touch test.txt
-echo 'hello world' > test.txt
+
+#	终端操作技巧
+##	光标
+Ctrl+a  光标移动到开始位置
+Ctrl+e  光标移动到最末尾
+##	删除
+Ctrl+k  删除此处至末尾的所有内容
+Ctrl+u  删除此处至开始的所有内容
+
 
 >	参考文档：
 [Git撤销&回滚操作](https://blog.csdn.net/ligang2585116/article/details/71094887)
-
-
+[Git Cheat Sheet](https://shfshanyue.github.io/cheat-sheets/git)
+[git-tips](https://github.com/git-tips/tips)
 
 
 
