@@ -19,6 +19,7 @@ category: "about"
 | 项目名        | 项目地址    |  演示地址  |
 | --------   | -----:  | :----: |
 | 基于React的loading组件库        | [Github](https://github.com/fanerge/fun-loading)     |   [Github pages](https://fanerge.github.io/fun-loading/dist/index.html#/)    |
+| 前端技术栈        | [Github](https://github.com/fanerge/JavaScript-repo)     |   [Github pages](https://github.com/fanerge/JavaScript-repo)    |
 | highCSS        | [Github](https://github.com/fanerge/highCSS)      |   [Github pages](https://fanerge.github.io/highCSS/)   |
 | 前端路由原理实现        | [Github](https://github.com/fanerge/front-end-router)      |   [Github pages](https://fanerge.github.io/front-end-router/index.html)    |
 ##	更多项目，移步至[Github](https://github.com/fanerge)......
