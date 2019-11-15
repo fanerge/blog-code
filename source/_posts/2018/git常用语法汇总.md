@@ -105,7 +105,14 @@ git add .
 git rebase \-\-continue
 git rebase \-\-abort // 在过程中可以终止rebase，恢复到rebase开始前的状态。
 [git rebase 与 git merge](http://gitbook.liuhui998.com/4_2.html)
-
+##  合并多次commitMessage（由于自己的分支）
+```
+// 例如将最近的5次commitMessage合并到倒数第6次（倒数第6次commitId为sha1）
+git rebase -i sha1
+// 后面进行交互式处理
+一般把需要保留的前面留p（pick），需要合并到前面的改为s（squash），注意一定要保证第一个为p
+后面还会确认commitMessage
+```
 #	git log
 用于显示提交日志信息
 git log -1 // 查看最近一条commit记录
