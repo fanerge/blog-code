@@ -290,6 +290,7 @@ Ctrl+u  删除此处至开始的所有内容
 
 
 >	参考文档：
+[配置tab快捷键补全](https://git-scm.com/book/zh/v2/%E9%99%84%E5%BD%95-A:-%E5%85%B6%E5%AE%83%E7%8E%AF%E5%A2%83%E4%B8%AD%E7%9A%84-Git-Bash-%E4%B8%AD%E7%9A%84-Git)
 [Git撤销&回滚操作](https://blog.csdn.net/ligang2585116/article/details/71094887)
 [Git Cheat Sheet](https://shfshanyue.github.io/cheat-sheets/git)
 [git-tips](https://github.com/git-tips/tips)
