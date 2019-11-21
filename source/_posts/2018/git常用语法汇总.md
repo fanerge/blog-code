@@ -260,6 +260,10 @@ git push [远程主机名] [本地分支名] // 将本地分支推送到远端
 git branch \-\-set-upstream-to [远程主机名]/[远程分支名]
 git checkout -b [localBranchName] [upstream]/[remoteBranchName]
 
+# .gitignore文件常用操作
+git update-index –assume-unchanged -path 可以忽略文件<br>
+git update-index –no-assume-unchanged –path 可以取消忽略文件<br>
+
 #	查端口所用PID，并kill【2019-02-01更新】
 ##	mac
 lsof -i:port号 // 查端口所用PID
