@@ -41,6 +41,8 @@ git pull origin next // 若想取回origin主机的next分支并与当前分支�
 git pull origin
 如果当前分支只有一个追踪分支，连远程主机名都可以省略
 git pull
+清理远程已删除本地还存在的分支（2020-04-20）
+git pull -p
 
 #	git add
 将文件内容添加到索引/暂存区
