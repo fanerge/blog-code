@@ -286,14 +286,32 @@ git blame [file] // 用来定位每一行代码的最后一次修改者
 ifconfig // 查看ip地址等信息
 ipconfig // 查看ip地址（window）
 
-#	终端操作技巧
-##	光标
-Ctrl+a  光标移动到开始位置
-Ctrl+e  光标移动到最末尾
-##	删除
-Ctrl+k  删除此处至末尾的所有内容
-Ctrl+u  删除此处至开始的所有内容
+# Git 异常处理清单
+更新于[2020-06-08]
+```
+// 本地工作区文件恢复
+git checkout <filename/dirname>
+// 远程分支删除后，删除本地分支及关联
+git branch --set-upstream-to=origin/master master
+git push origin --delete feature/test
+git branch --unset-upstream <branchname>
+// 修改分支名
+git branch -m <oldbranch> <newbranch>
+// 撤回提交
+git reset --soft [<commit-id>/HEAD~n>] // 只撤销commit
+git reset --mixed [<commit-id>/HEAD~n>] // 撤销stage Index + commit
+git reset --hard [<commit-id>/HEAD~n>] // 撤销work Space + stage Index + commit 
+// 撤销本地分支合并
+git revert <commit-id>
+// 时光机
+git reflog
+// 恢复误删的本地分支
+git checkout -b <branch-name> <commit-id>
+// 查看哪个分支有自己提交的 commit <commit-id>
+git branch --contains <commit-id>
+```
 
+[一份值得收藏的 Git 异常处理清单](https://mp.weixin.qq.com/s/GKdhcb0ekirjg4jEwERizA)
 
 >	参考文档：
 [配置tab快捷键补全](https://git-scm.com/book/zh/v2/%E9%99%84%E5%BD%95-A:-%E5%85%B6%E5%AE%83%E7%8E%AF%E5%A2%83%E4%B8%AD%E7%9A%84-Git-Bash-%E4%B8%AD%E7%9A%84-Git)
