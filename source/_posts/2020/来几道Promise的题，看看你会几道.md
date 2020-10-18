@@ -1,8 +1,8 @@
 ---
 title: 来几道Promise的题，看看你会几道?
 date: 2020-10-17 20:20:34
-tags: 'Promise'
-categories: 'JavaScript'
+tags: Promise
+categories: JavaScript
 copyright: true
 ---
 ###	前言
