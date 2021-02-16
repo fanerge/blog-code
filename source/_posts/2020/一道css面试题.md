@@ -6,7 +6,7 @@ keywords: flex
 copyright: true
 ---
 ## 前言
-今天，我还是像往常一样，在公交车上刷[掘金](https://juejin.im/timeline)和查看关注的大佬的文章，一般我会大致浏览一遍，对自己不熟悉的知识点，我会仔细研究。在看一篇[ 木易杨大佬，三年前端寒冬入大厂，收获蚂蚁、字节 offer 面经分享](https://mp.weixin.qq.com/s/CFoTRNDXHbqenmW7jFVczg)的文章，其中一道字节跳动的CSS题目吸引了我（哈哈，因为我对这个知识点比较含糊，答不上来），下面我们大家就一起来看看这道题吧。
+在看一篇[ 木易杨大佬，三年前端寒冬入大厂，收获蚂蚁、字节 offer 面经分享](https://mp.weixin.qq.com/s/CFoTRNDXHbqenmW7jFVczg)的文章，其中一道字节跳动的CSS题目吸引了我（哈哈，因为我对这个知识点比较含糊，答不上来），下面我们大家就一起来看看这道题吧。
 ## 题目
 ###  求最终 left、right 的宽度（container 的 width < left 的 width + right 的 width 的情况）
 ```
