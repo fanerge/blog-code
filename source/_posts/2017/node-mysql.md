@@ -201,7 +201,7 @@ tags: ['node','mysql','数据库']
 ####	插入数据（Insert）
 	```
 	var addSql = 'INSERT INTO websites(Id, name, url, alexa, country) VALUES(0, ?, ?, ?, ?)';
-	var addSqlParams = ['余真帆的博客', 'fanerge.githut.io', '333325', 'CN'];
+	var addSqlParams = ["fanerge's Blogs", 'fanerge.githut.io', '333325', 'CN'];
 	connection.query(addSql, addSqlParams, function (err, result) {
 		if (err) {
 			console.log('[SELECT ERROR] - ', err.message);
@@ -215,7 +215,7 @@ tags: ['node','mysql','数据库']
 ####	更新数据（Update）
 	```
 	var modSql = 'UPDATE websites SET name = ?, url = ?, alexa = ? WHERE Id = ?';
-	var modSqlParams = ['余真帆的网站', 'https://fanerge.github.io', 23, 6]
+	var modSqlParams = ["fanerge's Blogs", 'https://fanerge.github.io', 23, 6]
 	connection.query(modSql, modSqlParams, function (err, result) {
 		if (err) {
 			console.log('[UPDATE ERROR] - ', err.message);
@@ -228,7 +228,7 @@ tags: ['node','mysql','数据库']
 	```
 ####	删除数据（Delete）
 	```
-	var delSql = 'DELETE FROM websites WHERE name = "余真帆的博客"';
+	var delSql = 'DELETE FROM websites WHERE name = "fanerge's Blogs"';
 	connection.query(delSql, function (err, result) {
 		if (err) {
 			console.log('[DELETE ERROR] - ', err.message);

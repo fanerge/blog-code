@@ -11,9 +11,6 @@ category: "about"
 4. 邮箱：fanerge#qq.com（常用）\fanerge818#gmail.com
 5. github：[fanerge](https://github.com/fanerge)
 6. 掘金：[fanerge-个人中心](https://juejin.im/user/57cede6d5bbb50005b97536a)
-7. MDN：[fanerge-profiles](https://developer.mozilla.org/zh-CN/profiles/fanerge)	
-8. 知乎：[fanerge-个人主页](https://www.zhihu.com/people/fanerge/activities)
-9.	SegmentFault 思否：[fanerge-我的主页](https://segmentfault.com/u/fanerge)
 
 #	个人项目
 | 项目名        | 项目地址    |  演示地址  |
