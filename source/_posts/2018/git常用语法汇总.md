@@ -34,7 +34,7 @@ git checkout -b [localBranchName] [upstream]/[remoteBranchName] // 以远程[rem
 
 #	git pull
 用于从另一个存储库或本地分支获取并集成（git fetch + git merge FETCH_HEAD）
-git pull [远程主机名] [远程分支名]:[本地分支名] 
+git pull [远程主机名] [远程分支名]:[本地分支名]
 git pull origin next:master // 取回origin主机的next分支，与本地的master分支合并
 git pull origin next // 若想取回origin主机的next分支并与当前分支合并，可省略当前分支名
 一旦当前分支与远程分支存在追踪关系，git pull就可以省略远程分支名
@@ -52,16 +52,17 @@ git add -u [path] // 把[path]中所有跟踪文件中被修改过或已删除�
 git add -A [path] // 所有跟踪文件中被修改过或已删除文件和所有未跟踪的文件信息添加到暂存区（省略<path>表示 . ,即当前目录）
 git add -i [path] // 查看已跟踪的文件是否有更改、是否有添加到暂存区
 
-#	git status 
+#	git status
 用于显示工作目录和暂存区的状态
 git status -uno // 只列出所有已经被git管理的且被修改但没提交的文件
-git status -s // \-\-short 格式化输出git status 
+git status -s // \-\-short 格式化输出git status
 
 #	git commit
 将暂存区当前内容与描述更改的用户和日志消息一起存储在新的提交中
 git commit -a // 会对以已追踪的文件自动执行git add并commit（只会对已追踪的文件有效果）
 git commit -m '注释' // 带注释的提交
 git commit \-\-amend -m '注释'// 尝试重写提交（修改上次commit，如果提交内容没有更改，将使用本次提交注释覆盖上次提交注释）
+git show [ref_id] // 查看指定 commit
 
 #	git push
 用于将本地分支的更新
@@ -94,6 +95,8 @@ git branch \-\-unset-upstream // 撤销本地分支与远程分支的追踪关�
 git merge [branchName] // 合并branchName分支到当前分支的顶部
 git merge -s ours [branchName] // 合并branchName分支到当前分支,并使用ours合并策略（该参数将强迫冲突发生时，自动使用当前分支的版本）
 git merge -s theies [branchName] // 同上，但该参数将强迫冲突发生时，自动使用被合并分支的版本
+git merge-base branch1 branch2 // 找到公共分岔点
+
 
 #	git rebase
 如在 dev 分支上执行：git rebase master
@@ -135,13 +138,20 @@ git log -p // 查看提交历史并显示每次提交的内容差异
 git log -p -2 // 最近两条
 git log \-\-stat // 每次提交的简略的统计
 git log \-\-pretty=[args] // 参数为 oneline：一行显示，还有short，full ，fuller
+git log [file_path] // 查看某个文件的历史操作
+git log [branch_name] // 查看某个分支的历史操作
+git log -S foo // 可以只显示包含 foo 改动的 log（不是 commit message，是文件内容）
+git log branchA..branchB // 查看 branchB 中存在而 branchA 中不存在的 commits
+git log ^branchA ^branchC branchB // 查看 branchB 中存在而 branchA 和 branchC 中都不存在的 commits
+git log branchA...branchB // 查看 branchB 或 branchA 中存在，但另一个分支不存在的 commits
+git log --oneline --decorate --graph --all // 可展示分支分叉历史
 
 #	git shortlog
 用于汇总git日志输出（commit次数+提交注释）
 git shortlog -s // 汇总每位开发者commit次数
 git shortlog -n // commit次数排名
 
-#	git diff 
+#	git diff
 工作目录(Working tree)和暂存区域快照(index)之间的差异
 git diff [fileName] // 比较当前文件和暂存区文件差异
 git diff [commitId1] [commitId2] // 比较两次提交之间的差异
@@ -240,14 +250,14 @@ git commit -a -m 'remove [subModuleName] submodule'
 git show [tagName] // 查看相应标签的版本信息
 git show [tagName]^{tree} // 显示标签[tagName]指向的树
 git show -s \-\-format=%s [tagName]^{commit} // 显示标签[tagName]指向的提交主题
-git show next~10:Documentation/README // 
+git show next~10:Documentation/README //
 git show [commitId] // 查看某次提交的内容
 
 #	patch
 git format-patch // 创建最新提交的修补程序
 git format-patch [commitId] // 为指定[commitId]创建补丁
 git apply [补丁标记id] // 使用补丁修改本地文件而不创建提交
-git am [补丁标记id] // 使用补丁修改本地文件并创建提交 
+git am [补丁标记id] // 使用补丁修改本地文件并创建提交
 
 #	git config
 用于获取并设置存储库或全局选项
@@ -278,11 +288,13 @@ taskkill /pid  PID -t -f // 杀掉进程
 #	其他
 git init // 创建一个空的Git仓库或重新初始化一个现有仓库
 git reflog // 查看所有分支的所有操作记录（包括commit和reset的操作）
-git cherry-pick [commitHash] // 把某个分支的commit作为一个新的commit引入到你当前分支上 
+git cherry-pick [commitHash] // 把某个分支的commit作为一个新的commit引入到你当前分支上
+git cherry-pick [commit_hash_start]..[commit_hash_end] // 可以批量 cherry-pick 两个 commit 之间的提交
 git help // 查看帮助列表
 git help [key] // 查看特定[key]相关帮助
 git mergetool // 用于运行合并冲突解决工具来解决合并冲突
 git blame [file] // 用来定位每一行代码的最后一次修改者
+git bisect // 二分查bug引入的commit id，git bisect start、git bisect bad、git bisect good commitid
 ifconfig // 查看ip地址等信息
 ipconfig // 查看ip地址（window）
 
@@ -300,7 +312,7 @@ git branch -m <oldbranch> <newbranch>
 // 撤回提交
 git reset --soft [<commit-id>/HEAD~n>] // 只撤销commit
 git reset --mixed [<commit-id>/HEAD~n>] // 撤销stage Index + commit
-git reset --hard [<commit-id>/HEAD~n>] // 撤销work Space + stage Index + commit 
+git reset --hard [<commit-id>/HEAD~n>] // 撤销work Space + stage Index + commit
 // 撤销本地分支合并
 git revert <commit-id>
 // 时光机
